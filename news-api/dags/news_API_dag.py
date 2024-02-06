@@ -61,7 +61,7 @@ def api_etl():
             news_data = response.json()
             return news_data
         except Exception as e:
-            logging.error(f"Found Error in data_from_API: {str(e)}")
+            raise Exception(f"Found Error in data_from_API: {str(e)}")
 
     
     # Define a task to clean and transform the retrieved news data
@@ -81,7 +81,7 @@ def api_etl():
                 df.drop('publishedAt',axis=1,inplace=True)
                 df.to_csv(file_path, index=False)
             except Exception as e:
-                logging.error(f"Found Error in cleaning_and_transforming: {str(e)}")
+                raise Exception(f"Found Error in cleaning_and_transforming: {str(e)}")
 
     # Define a task to upload the cleaned and transformed data to AWS S3
     @task
