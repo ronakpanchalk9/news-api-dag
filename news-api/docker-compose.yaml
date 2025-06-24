@@ -67,7 +67,7 @@ x-airflow-common:
     AIRFLOW__SMTP__SMTP_STARTTLS: True
     AIRFLOW__SMTP__SMTP_SSL: False
     AIRFLOW__SMTP__SMTP_USER: ronakbadmash12@gmail.com
-    AIRFLOW__SMTP__SMTP_PASSWORD: Supercombo123
+    AIRFLOW__SMTP__SMTP_PASSWORD: ''
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__SMTP_MAIL_FROM: codingjava7@gmail.com
   volumes:
